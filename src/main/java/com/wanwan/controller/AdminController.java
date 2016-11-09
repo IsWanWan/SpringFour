@@ -26,6 +26,10 @@ public class AdminController {
     @Autowired
     private LogLoginService logLoginService;
 
+    /***
+     * 测试
+     * @return
+     */
     @RequestMapping("/index")
     public ModelAndView index(){
         ModelAndView mv = new ModelAndView();
@@ -35,6 +39,10 @@ public class AdminController {
         return mv;
     }
 
+    /***
+     * 测试
+     * @return
+     */
     @RequestMapping("/login")
     public Map Login(){
         Map map = new HashMap();
