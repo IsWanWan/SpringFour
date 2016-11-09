@@ -1,0 +1,26 @@
+package com.wanwan.task;
+
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+
+import java.util.Date;
+
+/**
+ * 定时任务
+ *
+ * @author wanwan
+ * @create 2016-11-09 下午5:07
+ */
+@Component
+public class Task {
+    @Scheduled(fixedRate = 1000 * 60)
+         public void rankingByScoreJob() {
+                 System.out.println("通过spring-task，每隔60秒执行一次任务。。。" +new Date());
+                 System.out.println("----------------------------------------");
+         //        userDao.rankingByScore();
+            }
+    @Scheduled(fixedRate = 1000 * 60)
+    public void  taskTwo(){
+        System.out.println(" ====== 定时任务2 :======= 一分钟" + new Date());
+    }
+}
