@@ -4,6 +4,8 @@ import com.wanwan.domain.Admin;
 import com.wanwan.domain.LogLogin;
 import com.wanwan.service.AdminService;
 import com.wanwan.service.LogLoginService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +20,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
-
+ public static final Logger logger = LoggerFactory.getLogger(AdminController.class);
   @Autowired
   private AdminService adminService;
     @Autowired
