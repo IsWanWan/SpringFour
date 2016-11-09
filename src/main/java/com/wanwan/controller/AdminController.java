@@ -40,7 +40,7 @@ public class AdminController {
     }
 
     /***
-     * 测试
+     * 登录接口
      * @return
      */
     @RequestMapping("/login")
