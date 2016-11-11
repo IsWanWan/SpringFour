@@ -9,4 +9,6 @@ import com.wanwan.domain.LogLogin;
 public interface LogLoginService {
 
     LogLogin selectByPrimaryKey(Long id);
+
+
 }

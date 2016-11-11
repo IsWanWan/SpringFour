@@ -21,9 +21,20 @@ public class AdminServiceImpl implements AdminService{
         return adminMapper.selectByPrimaryKey(id);
     }
 
+
     public int deleteByPrimaryKey(Integer id) {
         return adminMapper.deleteByPrimaryKey(id);
     }
 
+
+    /**
+     * 修改
+     *
+     * @param record
+     * @return
+     */
+    public int updateByPrimaryKeySelective(Admin record) {
+        return adminMapper.updateByPrimaryKeySelective(record);
+    }
 
 }
