@@ -32,6 +32,7 @@ public class AdminServiceImpl implements AdminService{
         return adminMapper.updateByPrimaryKeySelective(record);
     }
 
+
     public int deleteByPrimaryKey(Integer id) {
         return adminMapper.deleteByPrimaryKey(id);
     }
