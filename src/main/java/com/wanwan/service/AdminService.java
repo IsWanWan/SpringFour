@@ -9,6 +9,7 @@ public interface AdminService {
 
     Admin selectByPrimaryKey(Integer id);
 
+
     /**
      * 修改
      * @param record
@@ -16,4 +17,7 @@ public interface AdminService {
      */
 
     int updateByPrimaryKeySelective(Admin record);
+
+    int deleteByPrimaryKey(Integer id);
+
 }
