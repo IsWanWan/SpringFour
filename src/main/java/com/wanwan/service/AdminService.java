@@ -8,4 +8,12 @@ import com.wanwan.domain.Admin;
 public interface AdminService {
 
     Admin selectByPrimaryKey(Integer id);
+
+    /**
+     * 修改
+     * @param record
+     * @return
+     */
+
+    int updateByPrimaryKeySelective(Admin record);
 }
