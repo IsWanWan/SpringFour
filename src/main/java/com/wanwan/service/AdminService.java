@@ -8,4 +8,6 @@ import com.wanwan.domain.Admin;
 public interface AdminService {
 
     Admin selectByPrimaryKey(Integer id);
+
+    int deleteByPrimaryKey(Integer id);
 }
