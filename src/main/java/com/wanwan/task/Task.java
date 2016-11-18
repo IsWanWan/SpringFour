@@ -16,12 +16,12 @@ public class Task {
 
     @Scheduled(cron = "0 0 1 * * ?" ) //每天凌晨 1点执行
          public void rankingByScoreJob() {
-                 System.out.println("通过spring-task，每隔60秒执行一次任务。。。" +new Date());
+                 System.out.println("通过spring-task，每天凌晨1点执行。。。" +new Date());
                  System.out.println("----------------------------------------");
          //        userDao.rankingByScore();
             }
-    @Scheduled(fixedRate = 1000 * 60) // 一分钟执行一次
-    public void  taskTwo(){
-        System.out.println(" ====== 定时任务2 :======= 一分钟" + new Date());
-    }
+//    @Scheduled(fixedRate = 1000 * 60) // 一分钟执行一次
+//    public void  taskTwo(){
+//        System.out.println(" ====== 定时任务2 :======= 一分钟执行一次" + new Date());
+//    }
 }

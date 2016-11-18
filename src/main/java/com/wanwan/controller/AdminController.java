@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+import redis.clients.jedis.Jedis;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,6 +36,9 @@ public class AdminController {
         ModelAndView mv = new ModelAndView();
         Admin admin = adminService.selectByPrimaryKey(1);
         mv.addObject(admin);
+        Jedis jedis = new Jedis("localhost");
+        jedis.set("admin"+admin.getId(),admin.getName());
+        System.out.println(" get from admin:"+ jedis.get("admin"+admin.getId()));
         mv.setViewName("/test");
         return mv;
     }
