@@ -1,5 +1,8 @@
 package com.wanwan.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.wanwan.common.util.RedisCacheStorage;
+import com.wanwan.common.util.RedisCacheStorageImpl;
 import com.wanwan.domain.Admin;
 import com.wanwan.domain.LogLogin;
 import com.wanwan.service.AdminService;
@@ -10,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
-import redis.clients.jedis.Jedis;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,19 +28,26 @@ public class AdminController {
   private AdminService adminService;
     @Autowired
     private LogLoginService logLoginService;
-
+    /**
+     * 缓存存储
+     */
+     @Autowired
+    private RedisCacheStorageImpl<Admin> storageCache;
+    private String cacheKey = "admin";
     /***
      * 测试
      * @return
      */
+
     @RequestMapping("/index")
     public ModelAndView index(){
         ModelAndView mv = new ModelAndView();
         Admin admin = adminService.selectByPrimaryKey(1);
         mv.addObject(admin);
-        Jedis jedis = new Jedis("localhost");
-        jedis.set("admin"+admin.getId(),admin.getName());
-        System.out.println(" get from admin:"+ jedis.get("admin"+admin.getId()));
+
+        storageCache.hset(cacheKey,String.valueOf(admin.getId()),admin);
+        Admin adminO = JSON.parseObject(storageCache.hget(cacheKey,String.valueOf(admin.getId())),Admin.class) ;
+        System.out.println(" get from admin::::::"+adminO.getUsername());
         mv.setViewName("/test");
         return mv;
     }
