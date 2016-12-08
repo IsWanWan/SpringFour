@@ -48,6 +48,7 @@ public class AdminController {
         storageCache.hset(cacheKey,String.valueOf(admin.getId()),admin);
         Admin adminO = JSON.parseObject(storageCache.hget(cacheKey,String.valueOf(admin.getId())),Admin.class) ;
         System.out.println(" get from admin::::::"+adminO.getUsername());
+        logger.info("测试::::::::::::::::"+adminO.getUsername());
         mv.setViewName("/test");
         return mv;
     }
