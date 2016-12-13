@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 /**
- * 定时任务
+ * spring 定时任务
  *
  * @author wanwan
  * @create 2016-11-09 下午5:07

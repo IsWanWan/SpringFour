@@ -47,7 +47,7 @@ public class RedisClient {
         pool = new JedisPool(config, "127.0.0.1",6379,10000,"123456");
     }
 
-    RedisClient(){
+     public RedisClient(){
 
     }
     /**
