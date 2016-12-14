@@ -2,6 +2,7 @@ package com.wanwan.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.wanwan.common.constant.Constant;
+import com.wanwan.common.jsonview.JsonView;
 import com.wanwan.common.util.RedisCacheStorage;
 import com.wanwan.common.util.RedisCacheStorageImpl;
 import com.wanwan.domain.Admin;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
@@ -63,15 +65,24 @@ public class AdminController {
      * @return
      */
     @RequestMapping("/login")
-    public Map Login(){
+    public JsonView Login(HttpSession session,String username,String password) {
         Map map = new HashMap();
+        try {
+            Admin admin = adminService.login(username, password);
+            if (admin != null) {
+                session.setAttribute("user",admin);
+                return new JsonView(200, "登录成功");
 
-       // LogLogin logLogin = logLoginService.selectByPrimaryKey((long) 2236);
-     //   map.put("logLogin",logLogin);
-        BigDecimal bigDecimal = sysPriceService.selectByType(1);
-//        BigDecimal bigDecimal = Constant.MU_YAN_FREETALK_PERCENT;
-        map.put("bigDecimal",bigDecimal);
-        return map;
+            } else {
+                return new JsonView(300, "用户名或密码错误");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("登录错误");
+            return new JsonView(500, "系统错误");
+        }
+
+
     }
 
 }

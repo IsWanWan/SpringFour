@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by wanwan on 16/9/12.
  */
@@ -35,6 +38,20 @@ public class AdminServiceImpl implements AdminService{
 
     public int deleteByPrimaryKey(Integer id) {
         return adminMapper.deleteByPrimaryKey(id);
+    }
+
+    /**
+     * 登录
+     *
+     * @param  username, password
+     * @return
+     */
+    @Override
+    public Admin login(String username,String password) throws Exception {
+        Map map = new HashMap();
+        map.put("username",username);
+        map.put("password",password);
+        return adminMapper.login(map);
     }
 
 

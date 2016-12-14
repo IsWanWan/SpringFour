@@ -160,4 +160,8 @@
       imageUrl = #{imageurl,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="login" parameterType="java.util.Map" resultMap="BaseResultMap">
+      select * from admin a where a.name =#{username,jdbcType=VARCHAR}
+      and a.`password` = #{password,jdbcType=VARCHAR}
+  </select>
 </mapper>

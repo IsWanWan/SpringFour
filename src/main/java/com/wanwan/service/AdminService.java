@@ -2,6 +2,8 @@ package com.wanwan.service;
 
 import com.wanwan.domain.Admin;
 
+import java.util.Map;
+
 /**
  * Created by wanwan on 16/9/12.
  */
@@ -20,5 +22,10 @@ public interface AdminService {
 
     int deleteByPrimaryKey(Integer id);
 
-
+    /**
+     * 登录
+     * @param username,password
+     * @return
+     */
+    Admin login(String username,String password) throws Exception;
 }

@@ -34,6 +34,12 @@
             <property name="suffix" value=".jsp" />
         </bean>
 
-
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/admin/index"/>
+            <mvc:exclude-mapping path="/admin/login"/>
+            <bean class="com.wanwan.common.interceptor.CommonInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
     </beans>
 

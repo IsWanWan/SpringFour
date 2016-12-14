@@ -4,6 +4,8 @@ import com.wanwan.domain.Admin;
 
 import org.springframework.stereotype.Component;
 
+import java.util.Map;
+
 @Component
 public interface AdminMapper {
     int deleteByPrimaryKey(Integer id);
@@ -18,4 +20,11 @@ public interface AdminMapper {
     int updateByPrimaryKeySelective(Admin record);
 
     int updateByPrimaryKey(Admin record);
+
+    /**
+     * 登录
+     * @param map
+     * @return
+     */
+    Admin login(Map map);
 }

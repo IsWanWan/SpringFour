@@ -1,4 +1,4 @@
-package com.wanwan.test;
+package com.wanwan.common.test;
 
 import com.wanwan.common.util.RedisClient;
 import redis.clients.jedis.Jedis;
