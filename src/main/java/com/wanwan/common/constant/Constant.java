@@ -1,10 +1,6 @@
 package com.wanwan.common.constant;
 
 
-
-import com.wanwan.service.SysPriceService;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import java.math.BigDecimal;
 
 /**
