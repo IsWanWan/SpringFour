@@ -1,12 +1,14 @@
 package com.wanwan.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.wanwan.common.constant.Constant;
 import com.wanwan.common.util.RedisCacheStorage;
 import com.wanwan.common.util.RedisCacheStorageImpl;
 import com.wanwan.domain.Admin;
 import com.wanwan.domain.LogLogin;
 import com.wanwan.service.AdminService;
 import com.wanwan.service.LogLoginService;
+import com.wanwan.service.SysPriceService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,6 +31,8 @@ public class AdminController {
   private AdminService adminService;
     @Autowired
     private LogLoginService logLoginService;
+    @Autowired
+    private SysPriceService sysPriceService;
     /**
      * 缓存存储
      */
@@ -61,8 +66,11 @@ public class AdminController {
     public Map Login(){
         Map map = new HashMap();
 
-        LogLogin logLogin = logLoginService.selectByPrimaryKey((long) 2236);
-        map.put("logLogin",logLogin);
+       // LogLogin logLogin = logLoginService.selectByPrimaryKey((long) 2236);
+     //   map.put("logLogin",logLogin);
+        BigDecimal bigDecimal = sysPriceService.selectByType(1);
+//        BigDecimal bigDecimal = Constant.MU_YAN_FREETALK_PERCENT;
+        map.put("bigDecimal",bigDecimal);
         return map;
     }
 
