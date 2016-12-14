@@ -43,6 +43,7 @@
             <list>
                 <value>classpath*:com/wanwan/mapping/LogLoginMapper.xml</value>
                 <value>classpath*:com/wanwan/mapping/AdminMapper.xml</value>
+                <value>classpath*:com/wanwan/mapping/SysPriceMapper.xml</value>
             </list>
 
         </property>

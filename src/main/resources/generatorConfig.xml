@@ -28,7 +28,7 @@
                              targetPackage="com.wanwan.dao" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
-        <table schema="" tableName="t_log_login" domainObjectName="LogLogin"
+        <table schema="" tableName="tb_sys_price" domainObjectName="SysPrice"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
