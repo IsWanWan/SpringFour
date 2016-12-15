@@ -8,6 +8,9 @@ import org.springframework.web.servlet.ModelAndView;
 import redis.clients.jedis.Jedis;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 /**
@@ -20,17 +23,28 @@ import java.util.List;
 @RequestMapping("/common")
 public class CommonController {
     @RequestMapping("/log")
-    public ModelAndView getLog(HttpServletRequest request){
+    public ModelAndView getLog(HttpServletRequest request, HttpServletResponse response){
         ModelAndView mv = new ModelAndView();
         Admin admin = (Admin) request.getSession().getAttribute("user");
         Jedis jedis = new Jedis("localhost");
         List<String> list =  jedis.lrange("log-"+admin.getId(),0 ,-1);
         StringBuffer stringBuffer = new StringBuffer();
-        for (String ss: list) {
-            stringBuffer.append(ss);
+        PrintWriter printWriter = null;
+        try {
+            printWriter = response.getWriter();
+
+            for (String ss: list) {
+                //stringBuffer.append(ss);
+                printWriter.println(ss);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        printWriter.flush();
+        printWriter.close();
+
         mv.setViewName("/log");
-        mv.addObject("log",stringBuffer);
+      //  mv.addObject("log",stringBuffer);
         return mv ;
     }
 }
