@@ -44,7 +44,7 @@ public class RedisClient {
                     10000,JRedisPoolConfig.REDIS_PASSWORD);    */
 
         //redis未设置了密码：
-        pool = new JedisPool(config, "127.0.0.1",6379,10000,"123456");
+        pool = new JedisPool(config, "127.0.0.1",6379,10000);
     }
 
      public RedisClient(){
