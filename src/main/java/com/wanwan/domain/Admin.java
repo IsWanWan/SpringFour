@@ -1,6 +1,8 @@
 package com.wanwan.domain;
 
-public class Admin {
+import java.io.Serializable;
+
+public class Admin implements Serializable{
     private Integer id;
 
     private String name;
