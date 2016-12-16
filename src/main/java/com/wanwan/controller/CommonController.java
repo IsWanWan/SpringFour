@@ -1,6 +1,5 @@
 package com.wanwan.controller;
 
-import com.wanwan.common.jsonview.JsonView;
 import com.wanwan.domain.Admin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -12,8 +12,8 @@
 </head>
 <body>
 <form>
-    <input name="username" >
-    <input name ="password">
+    <input name="username" type="text">
+    <input name ="password" type ="text">
 </form>
 </body>
 </html>

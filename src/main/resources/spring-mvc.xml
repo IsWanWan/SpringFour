@@ -33,7 +33,7 @@
             <property name="prefix" value="/WEB-INF/view"/>
             <property name="suffix" value=".jsp" />
         </bean>
-
+  <!--springmvc 拦截器 -->
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
