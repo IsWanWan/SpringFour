@@ -21,12 +21,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/common")
 public class CommonController {
-    /**
-     * 本方法 ,输出系统操作日志
-     * @param request
-     * @param response
-     * @return
-     */
     @RequestMapping("/log")
     public ModelAndView getLog(HttpServletRequest request, HttpServletResponse response){
         ModelAndView mv = new ModelAndView();

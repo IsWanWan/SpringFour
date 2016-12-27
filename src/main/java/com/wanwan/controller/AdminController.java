@@ -26,11 +26,11 @@ public class AdminController {
  public static final Logger logger = LoggerFactory.getLogger(AdminController.class);
   @Autowired
   private AdminService adminService;
-//    @Autowired
-//    private LogLoginService logLoginService;
-//     @Autowired
-//     private SysPriceService sysPriceService;
-     /**
+    @Autowired
+    private LogLoginService logLoginService;
+    @Autowired
+    private SysPriceService sysPriceService;
+    /**
      * 缓存存储
      */
      @Autowired
