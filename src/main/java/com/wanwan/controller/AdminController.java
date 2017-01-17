@@ -44,9 +44,14 @@ public class AdminController {
     @RequestMapping("/index")
     public ModelAndView index(){
         ModelAndView mv = new ModelAndView();
-        Admin admin = adminService.selectByPrimaryKey(1);
-        mv.addObject(admin);
+        Admin admin = adminService.selectByPrimaryKey(2);
 
+        if(admin ==null){
+            logger.info("admin 不能为空!!!!!!!!!!!!!!!");
+            logger.error(" admin 为空");
+
+        }
+        mv.addObject(admin);
 //        storageCache.hset(cacheKey,String.valueOf(admin.getId()),admin);
 //        Admin adminO = JSON.parseObject(storageCache.hget(cacheKey,String.valueOf(admin.getId())),Admin.class) ;
 //        System.out.println(" get from admin::::::"+adminO.getUsername());
