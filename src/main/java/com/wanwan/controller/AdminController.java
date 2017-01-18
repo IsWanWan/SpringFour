@@ -85,4 +85,11 @@ public class AdminController {
 
     }
 
+    @RequestMapping("/test")
+    public JsonView test(){
+        Admin admin = new Admin();
+        admin.setUsername("hahahahah");
+        return new JsonView(200, "成功");
+    }
+
 }
