@@ -91,5 +91,11 @@ public class AdminController {
         admin.setUsername("hahahahah");
         return new JsonView(200, "成功");
     }
+    @RequestMapping("/sprintOne")
+    public JsonView sprintOne(){
+        Admin admin = new Admin();
+        admin.setUsername("sprintOne");
+        return new JsonView(200, "成功");
+    }
 
 }
