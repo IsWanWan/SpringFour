@@ -56,7 +56,7 @@ public class AdminController {
 //        Admin adminO = JSON.parseObject(storageCache.hget(cacheKey,String.valueOf(admin.getId())),Admin.class) ;
 //        System.out.println(" get from admin::::::"+adminO.getUsername());
 //        logger.info("测试::::::::::::::::"+adminO.getUsername());
-        mv.setViewName("/test");
+        mv.setViewName("/index");
         return mv;
     }
 
@@ -89,7 +89,7 @@ public class AdminController {
     public JsonView test(){
         Admin admin = new Admin();
         admin.setUsername("hahahahah");
-        return new JsonView(200, "成功");
+        return new JsonView(200, "成功",admin);
     }
     @RequestMapping("/sprintOne")
     public JsonView sprintOne(){
