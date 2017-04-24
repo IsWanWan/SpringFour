@@ -56,46 +56,52 @@ public class AdminController {
 //        Admin adminO = JSON.parseObject(storageCache.hget(cacheKey,String.valueOf(admin.getId())),Admin.class) ;
 //        System.out.println(" get from admin::::::"+adminO.getUsername());
 //        logger.info("测试::::::::::::::::"+adminO.getUsername());
+        mv.setViewName("/index");
+        return mv;
+    }
+
+    /**
+     * 博客详情页
+     * @return
+     */
+    @RequestMapping("/detail")
+    public ModelAndView detail(){
+        ModelAndView mv = new ModelAndView();
         mv.setViewName("/detail");
         return mv;
     }
 
-    /***
-     * 登录接口
-     * @return
-     */
+//    /***
+//     * 登录接口
+//     * @return
+//     */
+//    @RequestMapping("/login")
+//    public JsonView Login(HttpSession session,String username,String password) {
+////        Map map = new HashMap();
+////        try {
+////            Admin admin = adminService.login(username, password);
+////            if (admin != null) {
+////                session.setAttribute("user",admin);
+////                return new JsonView(200, "登录成功");
+////
+////            } else {
+////                return new JsonView(300, "用户名或密码错误");
+////            }
+////        } catch (Exception e) {
+////            e.printStackTrace();
+////            logger.error("登录错误");
+////            return new JsonView(500, "系统错误");
+////        }
+//
+//
+//    }
+
     @RequestMapping("/login")
-    public JsonView Login(HttpSession session,String username,String password) {
-        Map map = new HashMap();
-        try {
-            Admin admin = adminService.login(username, password);
-            if (admin != null) {
-                session.setAttribute("user",admin);
-                return new JsonView(200, "登录成功");
-
-            } else {
-                return new JsonView(300, "用户名或密码错误");
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            logger.error("登录错误");
-            return new JsonView(500, "系统错误");
-        }
-
-
+    public ModelAndView login(){
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("/login");
+        return mv;
     }
 
-    @RequestMapping("/test")
-    public JsonView test(){
-        Admin admin = new Admin();
-        admin.setUsername("hahahahah");
-        return new JsonView(200, "成功",admin);
-    }
-    @RequestMapping("/sprintOne")
-    public JsonView sprintOne(){
-        Admin admin = new Admin();
-        admin.setUsername("sprintOne");
-        return new JsonView(200, "成功");
-    }
 
 }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博客登录</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/login.css">
+</head>
+<body>
+ <div class="header">
+   <div class="logo"></div>
+ </div>
+<div class="content">
+   <div class="loginForm">
+       <form>
+           <div class="username">
+               <input type="text" name="username" required="required" class="textContent">
+           </div>
+           <div class="username">
+               <input type="text" name="password" required="required" class="textContent">
+           </div>
+           <div class="buttonClass">
+               <input type="button" value="SUBMIT" class="textButton">
+           </div>
+       </form>
+   </div>
+</div>
+ <div class="footer">
+     <p>关于博客合作伙伴营销中心廉正举报联系客服开放平台诚征英才联系我们网站地图法律声明© 2017 Taobao.com 版权所有</p>
+     <p>
+         网络文化经营许可证：文网文[2010]040号|增值电信业务经营许可证：浙B2-20080224-1|信息网络传播视听节目许可证：1109364号
+     </p>
+
+ </div>
+</body>
+</html>
