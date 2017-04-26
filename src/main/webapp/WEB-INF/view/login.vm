@@ -10,7 +10,7 @@
    <div class="logo"></div>
  </div>
 <div class="content">
-    <form method="post" action="#">
+    <form method="post" action="/admin/doLogin">
        <div class="loginForm">
            <div class="buttonClass">
               <input type="text" name="username" required="required" class="textContent" placeholder="YOUR USERNAME:">
@@ -19,7 +19,7 @@
                <input type="password" name="password" required="required" class="textContent"  placeholder="YOUR PASSWORD:">
            </div>
            <div class="buttonClass">
-               <input type="button" value="SUBMIT" class="textButton">
+               <input type="submit" value="SUBMIT" class="textButton">
            </div>
            <div class="text-other">
                <span class="forgetPass"><a href="#" >忘记密码 </a></span>

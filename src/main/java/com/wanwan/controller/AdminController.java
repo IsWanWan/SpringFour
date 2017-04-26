@@ -71,30 +71,30 @@ public class AdminController {
         return mv;
     }
 
-//    /***
-//     * 登录接口
-//     * @return
-//     */
-//    @RequestMapping("/login")
-//    public JsonView Login(HttpSession session,String username,String password) {
-////        Map map = new HashMap();
-////        try {
-////            Admin admin = adminService.login(username, password);
-////            if (admin != null) {
-////                session.setAttribute("user",admin);
-////                return new JsonView(200, "登录成功");
-////
-////            } else {
-////                return new JsonView(300, "用户名或密码错误");
-////            }
-////        } catch (Exception e) {
-////            e.printStackTrace();
-////            logger.error("登录错误");
-////            return new JsonView(500, "系统错误");
-////        }
-//
-//
-//    }
+    /***
+     * 登录接口
+     * @return
+     */
+    @RequestMapping("/doLogin")
+    public JsonView Login(HttpSession session,String username,String password) {
+        Map map = new HashMap();
+        try {
+            Admin admin = adminService.login(username, password);
+            if (admin != null) {
+                session.setAttribute("user",admin);
+                return new JsonView(200, "登录成功");
+
+            } else {
+                return new JsonView(300, "用户名或密码错误");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("登录错误");
+            return new JsonView(500, "系统错误");
+        }
+
+
+    }
 
     @RequestMapping("/login")
     public ModelAndView login(){
