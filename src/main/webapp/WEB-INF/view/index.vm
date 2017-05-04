@@ -23,10 +23,12 @@
            <li><a href="#">CONTACT ME</a></li>
        </ul>
    </div>
+
      <div class="login">
-         <span class="register">注册</span>
-         <span class="register">登录</span>
+         <span class="register"><a href="#">注册</a></span>
+         <span class="register"><a href="/admin/login">登录</a> </span>
      </div>
+
 
  </div>
 
@@ -206,7 +208,7 @@
             <span class="me"> Recent Post</span>
             <div class="postDetail">
                 <div class="detailLeft">
-                    <img src="../img/index/detailOne.jpg" style="width: 90px; height:80px">
+                    <img src="/static/images/index/detailOne.jpg" style="width: 90px; height:80px">
                 </div>
                 <div class="detailRight">
                     <p>Love your makeup brushes</p>

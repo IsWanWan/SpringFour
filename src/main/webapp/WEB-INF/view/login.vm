@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>博客登录</title>
     <link rel="stylesheet" type="text/css" href="/static/css/login.css">
+    <script src="/static/js/jquery-1.12.0.min.js"></script>
 </head>
 <body>
  <div class="header">
@@ -13,14 +14,16 @@
     <form method="post" action="/admin/doLogin">
        <div class="loginForm">
            <div class="buttonClass">
-              <input type="text" name="username" required="required" class="textContent" placeholder="YOUR USERNAME:">
+              <input type="text" name="username" required="required" id = "username" class="textContent" placeholder="YOUR USERNAME:">
            </div>
            <div class="buttonClass">
-               <input type="password" name="password" required="required" class="textContent"  placeholder="YOUR PASSWORD:">
+               <input type="password" name="password" required="required" id = "password" class="textContent"  placeholder="YOUR PASSWORD:">
            </div>
-           <div class="buttonClass">
-               <input type="submit" value="SUBMIT" class="textButton">
+           <div class="buttonClass" id="test2">
+
+               <input type="button" value="SUBMIT" class="textButton" id="textButton" />
            </div>
+
            <div class="text-other">
                <span class="forgetPass"><a href="#" >忘记密码 </a></span>
                <span class="freeRegister"><a href="#">免费注册</a></span>
@@ -35,5 +38,33 @@
      </p>
 
  </div>
+<script>
+    $(document).ready(function(){
+        $("#textButton").click(function () {
+            var url="/admin/doLogin";
+            var  username = $("#username").val();
+            var password = $("#password").val();
+            jQuery.ajax({
+                type:"post",
+                url:url,
+                dataType:'json',
+                data:{username:username ,password:password},
+                success:function(json){
+                    if(json.code ==200){
+                        window.location.href = "/admin/index";
+
+                    }else{
+                        $("#test2").html(" <div class=\"buttonClass\"> <span>用户名或密码错误！</span><input type=\"button\" value=\"SUBMIT\" class=\"textButton\" " +
+                                "id=\"textButton\" /> </div>");
+                    }
+                }
+
+            });
+
+        });
+
+    });
+
+</script>
 </body>
 </html>
