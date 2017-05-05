@@ -14,6 +14,7 @@
     <spring.version>4.3.2.RELEASE</spring.version>
     <plugin.mybatis.generator>1.3.2</plugin.mybatis.generator>
     <slf4j.version>1.7.9</slf4j.version>
+    <log4j.version>1.2.17</log4j.version>
   </properties>
 
   <dependencies>
@@ -141,18 +142,26 @@
       <version>2.6.11</version>
     </dependency>
     <!-- 日志文件管理包 -->
+
     <!-- log start -->
-    <!-- Logging -->
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
+
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>${slf4j.version}</version>
     </dependency>
+
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
       <version>${slf4j.version}</version>
     </dependency>
+    <!-- log end -->
     <!-- log end -->
     <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
     <dependency>
@@ -216,12 +225,19 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
+        <artifactId>maven-resources-plugin</artifactId>
         <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
+          <overwrite>true</overwrite>
         </configuration>
       </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+
 
     </plugins>
 
@@ -230,6 +246,7 @@
         <directory>src/main/java</directory>
         <includes>
           <include>**/*.xml</include>
+          <include>**/*.properties</include>
         </includes>
       </resource>
     </resources>

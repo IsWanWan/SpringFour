@@ -12,17 +12,17 @@
         http://www.springframework.org/schema/tx
 		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
 
-    <!-- 加载配置文件 -->
+    <!-- 加载外部文件配置文件 -->
     <context:property-placeholder location="classpath:db/jdbc.properties" />
     <!-- 数据库连接池 -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://127.0.0.1:3306/test" />
-        <property name="username" value="root" />
-        <property name="password" value="root" />
-        <property name="maxActive" value="10" />
-        <property name="maxIdle" value="5" />
+        <property name="driverClassName" value="${driver}" />
+        <property name="url" value="${url}" />
+        <property name="username" value="${username}" />
+        <property name="password" value="${password}" />
+        <property name="maxActive" value="${maxActive}" />
+        <property name="maxIdle" value="${maxIdle}" />
     </bean>
 
       <!-- 这里不扫描controller  在springmvc中扫描controller-->
