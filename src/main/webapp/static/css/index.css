@@ -71,7 +71,7 @@ a{
     width:1024px;
     height: 280px;
     margin: 0 auto;
-    background-image:url("/static/images/index/misszlogo.jpg");
+    background-image:url("../images/index/misszlogo.jpg");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -80,7 +80,7 @@ a{
     height: 436px;
     margin:0 auto;
     text-align: center;
-    background-image: url("/static/images/index/bannerone.jpg");
+    background-image: url("../images/index/bannerone.jpg");
     background-repeat: no-repeat;
     background-size: 1024px 436px;
 
@@ -234,7 +234,7 @@ span.me{
     margin-top: 30px;
     width: 208px;
     height: 139px;
-    background-image: url("/static/images/index/aboutMe.jpg");
+    background-image: url("../images/index/aboutMe.jpg");
     background-size: 208px 139px;
 
 }
@@ -259,7 +259,7 @@ span.me{
     height: 207px;
     position: relative;
     top:30px;
-    background-image: url("/static/images/index/WelcomeOffer.jpg");
+    background-image: url("../images/index/WelcomeOffer.jpg");
     background-size: 207px 207px;
 }
 .recentPost{

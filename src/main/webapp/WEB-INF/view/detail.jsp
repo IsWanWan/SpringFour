@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>博客详情</title>
 </head>
-<link href="/static/css/detail.css" type="text/css" rel="stylesheet"/></head>
+<link href="<%=request.getContextPath()%>/static/css/detail.css" type="text/css" rel="stylesheet"/></head>
 <body>
 <div class="header">
     <div class="menu">
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div>
-                <img src="/static/images/index/blows.jpg" style="width: 708px" height="430px">
+                <img src="<%=request.getContextPath()%>/static/images/index/blows.jpg" style="width: 708px" height="430px">
             </div>
             <div class="blogContent">
                 <span class="d">D </span> Donec eros purus, molestie eget dui ut, malesuada accumsan dolor. Phasellus maximus metus at consectetur ullamcorper. Etiam tempor sagittis eros, et semper sem pulvinar at. Proin semper dapibus metus, sed ornare leo porttitor sed. Integer leo ipsum, finibus quis risus a, ullamcorper dictum nunc. Nam sed accumsan orci. Aliquam tempor tincidunt semper.
@@ -75,7 +75,7 @@
                 Vestibulum id sem eget felis rhoncus vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc rhoncus ut neque non dictum. Nam dignissim diam non sem vehicula, at blandit justo placerat. Quisque interdum dapibus tempus. In nec auctor nunc. Quisque ut consequat metus, nec fringilla tellus. Mauris non felis non tortor laoreet tempor. Nunc tincidunt orci at nulla vehicula molestie. Quisque gravida tincidunt risus nec pulvinar
             </div>
             <div>
-                <img src="/static/images/index/brush.jpg">
+                <img src="<%=request.getContextPath()%>/static/images/index/brush.jpg">
             </div>
             <div class="blogContent">
 
@@ -103,7 +103,7 @@
             </div>
             <div class="admin">
                 <div class="adminPhoto">
-                    <img src="/static/images/index/adminPhoto.jpeg" style="right: 120px ;height: 120px">
+                    <img src="<%=request.getContextPath()%>/static/images/index/adminPhoto.jpeg" style="right: 120px ;height: 120px">
                 </div>
                 <div class="adminIntroduction">
                     <span style="display: block;font-size: 18px">Wendy</span>
@@ -122,17 +122,17 @@
 
             <ul >
                 <li>
-                    <div><img src="/static/images/index/shutterstocklikeOne.jpg" style="width: 214px;height: 140px"></div>
+                    <div><img src="<%=request.getContextPath()%>/static/images/index/shutterstocklikeOne.jpg" style="width: 214px;height: 140px"></div>
                     <div class="likeTitle">Love your makeup brushes</div>
                     <div class="likeDate">at SEP 7 . 2016</div>
                 </li>
                 <li>
-                    <div><img src="/static/images/index/shutterstockLikeTwo.jpg" style="width: 214px;height: 140px"></div>
+                    <div><img src="<%=request.getContextPath()%>/static/images/index/shutterstockLikeTwo.jpg" style="width: 214px;height: 140px"></div>
                     <div class="likeTitle">Love your makeup brushes</div>
                     <div class="likeDate">at SEP 7 . 2016</div>
                 </li>
                 <li>
-                    <div><img src="/static/images/index/shutterstockLikeThree.jpg" style="width: 214px;height: 140px"></div>
+                    <div><img src="<%=request.getContextPath()%>/static/images/index/shutterstockLikeThree.jpg" style="width: 214px;height: 140px"></div>
                     <div class="likeTitle">Love your makeup brushes</div>
                     <div class="likeDate">at SEP 7 . 2016</div>
                 </li>
@@ -182,7 +182,7 @@
             <span class="me"> Recent Post</span>
             <div class="postDetail">
                 <div class="detailLeft">
-                    <img src="/static/images/index/detailOne.jpg" style="width: 90px; height:80px">
+                    <img src="<%=request.getContextPath()%>/static/images/index/detailOne.jpg" style="width: 90px; height:80px">
                 </div>
                 <div class="detailRight">
                     <p>Love your makeup brushes</p>
@@ -191,7 +191,7 @@
             </div>
             <div class="postDetail">
                 <div class="detailLeft">
-                    <img src="/static/images/index/detailTwo.jpg" style="width: 90px; height:80px">
+                    <img src="<%=request.getContextPath()%>/static/images/index/detailTwo.jpg" style="width: 90px; height:80px">
                 </div>
                 <div class="detailRight">
                     <p>Love your makeup brushes</p>
@@ -202,7 +202,7 @@
             </div>
             <div class="postDetail">
                 <div class="detailLeft">
-                    <img src="/static/images/index/detailThree.jpg" style="width: 90px; height:80px">
+                    <img src="<%=request.getContextPath()%>/static/images/index/detailThree.jpg" style="width: 90px; height:80px">
                 </div>
                 <div class="detailRight">
                     <p>Love your makeup brushes</p>

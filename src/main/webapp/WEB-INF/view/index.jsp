@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>博客首页</title>
-<link href="/static/css/index.css" type="text/css" rel="stylesheet"/></head>
+<link href="<%=request.getContextPath()%>/static/css/index.css" type="text/css" rel="stylesheet"/></head>
 <body>
  <div class="header">
    <div class="menu">
@@ -60,7 +60,7 @@
                   </div>
               </div>
               <div>
-                  <img src="/static/images/index/blows.jpg" style="width: 708px" height="430px">
+                  <img src="<%=request.getContextPath()%>/static/images/index/blows.jpg" style="width: 708px" height="430px">
               </div>
               <div class="blogContent">
                   <span class="d">D </span> onec eros purus, molestie eget dui ut,
@@ -85,7 +85,7 @@
                   </div>
               </div>
               <div>
-                  <img src="/static/images/index/shutterstock_100468744.jpg" style="width: 708px" height="430px">
+                  <img src="<%=request.getContextPath()%>/static/images/index/shutterstock_100468744.jpg" style="width: 708px" height="430px">
               </div>
               <div class="blogContent">
                   <span class="d">D </span> onec eros purus, molestie eget dui ut,
@@ -111,7 +111,7 @@
                   </div>
               </div>
               <div>
-                  <img src="/static/images/index/flowers.jpg" style="width: 708px" height="430px">
+                  <img src="<%=request.getContextPath()%>/static/images/index/flowers.jpg" style="width: 708px" height="430px">
               </div>
               <div class="blogContent">
                   <span class="d">D </span> onec eros purus, molestie eget dui ut,
@@ -136,7 +136,7 @@
                       </div>
                   </div>
                   <div>
-                      <img src="/static/images/index/brushImg.jpg" style="width: 708px" height="430px">
+                      <img src="<%=request.getContextPath()%>/static/images/index/brushImg.jpg" style="width: 708px" height="430px">
                   </div>
                   <div class="blogContent">
                       <span class="d">D </span> onec eros purus, molestie eget dui ut,
@@ -163,7 +163,7 @@
                   </div>
               </div>
               <div>
-                  <img src="/static/images/index/shutterstock.jpg" style="width: 708px" height="430px">
+                  <img src="<%=request.getContextPath()%>/static/images/index/shutterstock.jpg" style="width: 708px" height="430px">
               </div>
               <div class="blogContent">
                   <span class="d">D </span> onec eros purus, molestie eget dui ut,
@@ -208,7 +208,7 @@
             <span class="me"> Recent Post</span>
             <div class="postDetail">
                 <div class="detailLeft">
-                    <img src="/static/images/index/detailOne.jpg" style="width: 90px; height:80px">
+                    <img src="<%=request.getContextPath()%>/static/images/index/detailOne.jpg" style="width: 90px; height:80px">
                 </div>
                 <div class="detailRight">
                     <p>Love your makeup brushes</p>
@@ -217,7 +217,7 @@
             </div>
             <div class="postDetail">
                 <div class="detailLeft">
-                    <img src="/static/images/index/detailTwo.jpg" style="width: 90px; height:80px">
+                    <img src="<%=request.getContextPath()%>/static/images/index/detailTwo.jpg" style="width: 90px; height:80px">
                 </div>
                 <div class="detailRight">
                     <p>Love your makeup brushes</p>
@@ -228,7 +228,7 @@
             </div>
             <div class="postDetail">
                 <div class="detailLeft">
-                    <img src="/static/images/index/detailThree.jpg" style="width: 90px; height:80px">
+                    <img src="<%=request.getContextPath()%>/static/images/index/detailThree.jpg" style="width: 90px; height:80px">
                 </div>
                 <div class="detailRight">
                     <p>Love your makeup brushes</p>

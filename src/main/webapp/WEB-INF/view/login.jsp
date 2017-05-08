@@ -1,18 +1,21 @@
-<%@ page language="java" import="java.util.*"  pageEncoding="GB2312" %>
+
+<%@ page contentType="text/html;charset=UTF-8" language="java"  pageEncoding="GB2312"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>博客登录</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/login.css">
-    <script src="/static/js/jquery-1.12.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/css/login.css">
+    <script src="<%=request.getContextPath()%>/static/js/jquery-1.12.0.min.js"></script>
 </head>
 <body>
 <div class="header">
-    <div class="logo"></div>
+    <div class="logo"  >
+
+    </div>
 </div>
 <div class="content">
-    <form method="post" action="/admin/doLogin">
+    <form method="post" action=<%=request.getContextPath()%>+"/admin/doLogin">
         <div class="loginForm">
             <div class="buttonClass">
                 <input type="text" name="username" required="required" id = "username" class="textContent" placeholder="YOUR USERNAME:">
@@ -42,7 +45,7 @@
 <script>
     $(document).ready(function(){
         $("#textButton").click(function () {
-            var url="/admin/doLogin";
+            var url="<%=request.getContextPath()%>/admin/doLogin";
             var  username = $("#username").val();
             var password = $("#password").val();
             jQuery.ajax({
@@ -52,7 +55,7 @@
                 data:{username:username ,password:password},
                 success:function(json){
                     if(json.code ==200){
-                        window.location.href = "/admin/index";
+                        window.location.href = "<%=request.getContextPath()%>/admin/index";
 
                     }else{
                         $("#test2").html(" <div class=\"buttonClass\"> <span>用户名或密码错误！</span><input type=\"button\" value=\"SUBMIT\" class=\"textButton\" " +
