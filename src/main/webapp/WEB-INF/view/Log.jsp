@@ -12,6 +12,6 @@
 </head>
 <body>
   <p>log:</p>
-<p>${log}</p>
+ <p>${log}</p>
 </body>
 </html>

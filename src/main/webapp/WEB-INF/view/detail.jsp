@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>博客详情</title>
 </head>
-<link href="http://127.0.0.1:8080/springFour/static/css/detail.css" type="text/css" rel="stylesheet"/></head>
+<link href="/static/css/detail.css" type="text/css" rel="stylesheet"/></head>
 <body>
 <div class="header">
     <div class="menu">
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div>
-                <img src="http://127.0.0.1:8080/springFour//static/images/index/blows.jpg" style="width: 708px" height="430px">
+                <img src="/static/images/index/blows.jpg" style="width: 708px" height="430px">
             </div>
             <div class="blogContent">
                 <span class="d">D </span> Donec eros purus, molestie eget dui ut, malesuada accumsan dolor. Phasellus maximus metus at consectetur ullamcorper. Etiam tempor sagittis eros, et semper sem pulvinar at. Proin semper dapibus metus, sed ornare leo porttitor sed. Integer leo ipsum, finibus quis risus a, ullamcorper dictum nunc. Nam sed accumsan orci. Aliquam tempor tincidunt semper.
