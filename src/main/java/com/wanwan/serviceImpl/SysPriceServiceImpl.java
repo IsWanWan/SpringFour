@@ -20,13 +20,12 @@ import java.math.BigDecimal;
 public class SysPriceServiceImpl implements SysPriceService {
     @Autowired
     private SysPriceMapper sysPriceMapper;
+
     /***
      * 根据type 查询
-     *
      * @param type
      * @return
      */
-    @Override
     public BigDecimal selectByType(Integer type) {
         return sysPriceMapper.selectByType(type);
     }

@@ -27,5 +27,5 @@ public interface AdminService {
      * @param username,password
      * @return
      */
-    Admin login(String username,String password) throws Exception;
+    Admin login(String username,String password) throws Exception ;
 }

@@ -1,9 +1,10 @@
 package com.wanwan.dao;
 
 import com.wanwan.domain.SysPrice;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
-
+@Component
 public interface SysPriceMapper {
     int deleteByPrimaryKey(Integer id);
 

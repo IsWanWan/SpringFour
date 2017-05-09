@@ -2,6 +2,9 @@ package com.wanwan.dao;
 
 import com.wanwan.domain.LogLogin;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public interface LogLoginMapper {
     int deleteByPrimaryKey(Long id);
 

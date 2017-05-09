@@ -3,6 +3,7 @@ package com.wanwan.serviceImpl;
 import com.wanwan.dao.AdminMapper;
 import com.wanwan.domain.Admin;
 import com.wanwan.service.AdminService;
+import org.apache.commons.collections.map.HashedMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -43,15 +44,16 @@ public class AdminServiceImpl implements AdminService{
     /**
      * 登录
      *
-     * @param  username, password
+     * @param username
+     * @param password
      * @return
      */
-    @Override
-    public Admin login(String username,String password) throws Exception {
-        Map map = new HashMap();
+    public Admin login(String username, String password) throws Exception {
+       Map<String,Object> map = new HashedMap();
+       map.put("username",username);
         map.put("username",username);
-        map.put("password",password);
-        return adminMapper.login(map);
+
+        return null;
     }
 
 

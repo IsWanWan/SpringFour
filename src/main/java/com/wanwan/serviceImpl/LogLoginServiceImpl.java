@@ -1,5 +1,7 @@
 package com.wanwan.serviceImpl;
 
+import com.wanwan.dao.AdminMapper;
+
 import com.wanwan.dao.LogLoginMapper;
 import com.wanwan.domain.LogLogin;
 import com.wanwan.service.LogLoginService;
@@ -14,9 +16,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class LogLoginServiceImpl implements LogLoginService{
-    @Autowired
+   @Autowired
     private LogLoginMapper logLoginMapper;
+
     public LogLogin selectByPrimaryKey(Long id) {
-        return logLoginMapper.selectByPrimaryKey((long) 2236);
+
+        return logLoginMapper.selectByPrimaryKey((long) 2230);
     }
 }
