@@ -17,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 import javax.servlet.http.HttpSession;
+import java.lang.reflect.Proxy;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -84,7 +85,8 @@ public class AdminController {
 
         //动态代理做日志
         LogProxy logHandler = new LogProxy();
-        AdminService adminService = (AdminService)logHandler.newProxyInstance(new AdminServiceImpl());
+
+        AdminServiceImpl adminService = (AdminServiceImpl) logHandler.newProxyInstance(new AdminServiceImpl());
 
         Map map = new HashMap();
         try {
