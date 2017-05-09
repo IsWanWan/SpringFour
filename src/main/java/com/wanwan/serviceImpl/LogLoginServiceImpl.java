@@ -1,7 +1,5 @@
 package com.wanwan.serviceImpl;
 
-import com.wanwan.dao.AdminMapper;
-
 import com.wanwan.dao.LogLoginMapper;
 import com.wanwan.domain.LogLogin;
 import com.wanwan.service.LogLoginService;
