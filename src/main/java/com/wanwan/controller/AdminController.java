@@ -28,8 +28,8 @@ import java.util.Map;
 @RequestMapping("/admin")
 public class AdminController {
  public static final Logger logger = LoggerFactory.getLogger(AdminController.class);
-//  @Autowired
-//  private AdminService adminService;
+  @Autowired
+  private AdminService adminService;
     @Autowired
     private LogLoginService logLoginService;
     @Autowired
@@ -83,10 +83,10 @@ public class AdminController {
     @RequestMapping("/doLogin")
     public JsonView Login(HttpSession session,String username,String password) {
 
-        //动态代理做日志
-        LogProxy logHandler = new LogProxy();
-
-        AdminServiceImpl adminService = (AdminServiceImpl) logHandler.newProxyInstance(new AdminServiceImpl());
+//        //动态代理做日志
+//        LogProxy logHandler = new LogProxy();
+//
+//        AdminServiceImpl adminService = (AdminServiceImpl) logHandler.newProxyInstance(new AdminServiceImpl());
 
         Map map = new HashMap();
         try {

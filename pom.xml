@@ -18,12 +18,7 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
+
 
     <!--spring -->
     <dependency>
@@ -207,7 +202,18 @@
       <artifactId>jedis</artifactId>
       <version>2.6.0</version>
     </dependency>
+    <!--<dependency>-->
+      <!--<groupId>junit</groupId>-->
+      <!--<artifactId>junit</artifactId>-->
+      <!--<version>4.12</version>-->
+    <!--</dependency>-->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+    </dependency>
     <!--jedis-->
+
   </dependencies>
   <build>
     <finalName>springFour</finalName>

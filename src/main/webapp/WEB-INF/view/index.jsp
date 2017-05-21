@@ -1,8 +1,9 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java"  pageEncoding="GB2312"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ÂçöÂÆ¢È¶ñÈ°µ</title>
+    <title>≤©øÕ ◊“≥</title>
 <link href="<%=request.getContextPath()%>/static/css/index.css" type="text/css" rel="stylesheet"/></head>
 <body>
  <div class="header">
@@ -25,8 +26,8 @@
    </div>
 
      <div class="login">
-         <span class="register"><a href="#">Ê≥®ÂÜå</a></span>
-         <span class="register"><a href="/admin/login">ÁôªÂΩï</a> </span>
+         <span class="register"><a href="#">◊¢≤·</a></span>
+         <span class="register"><a href="/admin/login">µ«¬º</a> </span>
      </div>
 
 
@@ -49,7 +50,7 @@
   <div class="content">
       <div class="blogList">
 
-          <!---------------------Âçï‰∏™ÁöÑÂçöÂÆ¢ÂÜÖÂÆπ ---------------------->
+          <!---------------------µ•∏ˆµƒ≤©øÕƒ⁄»› ---------------------->
 
           <div class="contentList">
               <div class="titlePart">
@@ -64,7 +65,7 @@
               </div>
               <div class="blogContent">
                   <span class="d">D </span> onec eros purus, molestie eget dui ut,
-                  malesuada accumsan dolor. Phasellus maximus metus at consectetur ullamcorper. Etiam tempor sagittis eros‚Ä¶
+                  malesuada accumsan dolor. Phasellus maximus metus at consectetur ullamcorper. Etiam tempor sagittis eros°≠
               </div>
               <div class="contentFoot">
                   <div class="author">by Admin</div>
@@ -73,8 +74,8 @@
               </div>
           </div>
 
-          <!---------------------Âçï‰∏™ÁöÑÂçöÂÆ¢ÂÜÖÂÆπ ÁªìÊùü ---------------------->
-          <!---------------------Âçï‰∏™ÁöÑÂçöÂÆ¢ÂÜÖÂÆπ ---------------------->
+          <!---------------------µ•∏ˆµƒ≤©øÕƒ⁄»› Ω· ¯ ---------------------->
+          <!---------------------µ•∏ˆµƒ≤©øÕƒ⁄»› ---------------------->
 
           <div class="contentList">
               <div class="titlePart">
@@ -89,7 +90,7 @@
               </div>
               <div class="blogContent">
                   <span class="d">D </span> onec eros purus, molestie eget dui ut,
-                  malesuada accumsan dolor. Phasellus maximus metus at consectetur ullamcorper. Etiam tempor sagittis eros‚Ä¶
+                  malesuada accumsan dolor. Phasellus maximus metus at consectetur ullamcorper. Etiam tempor sagittis eros°≠
               </div>
               <div class="contentFoot">
                   <div class="author">by Admin</div>
@@ -98,9 +99,9 @@
               </div>
           </div>
 
-          <!---------------------Âçï‰∏™ÁöÑÂçöÂÆ¢ÂÜÖÂÆπ ÁªìÊùü ---------------------->
+          <!---------------------µ•∏ˆµƒ≤©øÕƒ⁄»› Ω· ¯ ---------------------->
 
-          <!---------------------Âçï‰∏™ÁöÑÂçöÂÆ¢ÂÜÖÂÆπ ---------------------->
+          <!---------------------µ•∏ˆµƒ≤©øÕƒ⁄»› ---------------------->
 
           <div class="contentList">
               <div class="titlePart">
@@ -115,7 +116,7 @@
               </div>
               <div class="blogContent">
                   <span class="d">D </span> onec eros purus, molestie eget dui ut,
-                  malesuada accumsan dolor. Phasellus maximus metus at consectetur ullamcorper. Etiam tempor sagittis eros‚Ä¶
+                  malesuada accumsan dolor. Phasellus maximus metus at consectetur ullamcorper. Etiam tempor sagittis eros°≠
               </div>
               <div class="contentFoot">
                   <div class="author">by Admin</div>
@@ -124,8 +125,8 @@
               </div>
           </div>
 
-          <!---------------------Âçï‰∏™ÁöÑÂçöÂÆ¢ÂÜÖÂÆπ ÁªìÊùü ---------------------->
-         <!---------------------Âçï‰∏™ÁöÑÂçöÂÆ¢ÂÜÖÂÆπ ---------------------->
+          <!---------------------µ•∏ˆµƒ≤©øÕƒ⁄»› Ω· ¯ ---------------------->
+         <!---------------------µ•∏ˆµƒ≤©øÕƒ⁄»› ---------------------->
 
               <div class="contentList">
                   <div class="titlePart">
@@ -140,7 +141,7 @@
                   </div>
                   <div class="blogContent">
                       <span class="d">D </span> onec eros purus, molestie eget dui ut,
-                      malesuada accumsan dolor. Phasellus maximus metus at consectetur ullamcorper. Etiam tempor sagittis eros‚Ä¶
+                      malesuada accumsan dolor. Phasellus maximus metus at consectetur ullamcorper. Etiam tempor sagittis eros°≠
                   </div>
                   <div class="contentFoot">
                     <div class="author">by Admin</div>
@@ -149,10 +150,10 @@
                   </div>
               </div>
 
-           <!---------------------Âçï‰∏™ÁöÑÂçöÂÆ¢ÂÜÖÂÆπ ÁªìÊùü ---------------------->
+           <!---------------------µ•∏ˆµƒ≤©øÕƒ⁄»› Ω· ¯ ---------------------->
 
 
-          <!---------------------Âçï‰∏™ÁöÑÂçöÂÆ¢ÂÜÖÂÆπ ---------------------->
+          <!---------------------µ•∏ˆµƒ≤©øÕƒ⁄»› ---------------------->
 
           <div class="contentList">
               <div class="titlePart">
@@ -167,7 +168,7 @@
               </div>
               <div class="blogContent">
                   <span class="d">D </span> onec eros purus, molestie eget dui ut,
-                  malesuada accumsan dolor. Phasellus maximus metus at consectetur ullamcorper. Etiam tempor sagittis eros‚Ä¶
+                  malesuada accumsan dolor. Phasellus maximus metus at consectetur ullamcorper. Etiam tempor sagittis eros°≠
               </div>
               <div class="contentFoot">
                   <div class="author">by Admin</div>
@@ -176,7 +177,7 @@
               </div>
           </div>
 
-          <!---------------------Âçï‰∏™ÁöÑÂçöÂÆ¢ÂÜÖÂÆπ ÁªìÊùü ---------------------->
+          <!---------------------µ•∏ˆµƒ≤©øÕƒ⁄»› Ω· ¯ ---------------------->
          <div class="page">
              <div class="pageContent">
                  <span> 1 </span>
@@ -189,7 +190,7 @@
 
 
       </div>
-      <!------------------Âè≥‰æßËèúÂçïÂºÄÂßã-------------------->
+      <!------------------”“≤‡≤Àµ•ø™ º-------------------->
       <div class="rightMenu">
        <div class="aboutMe">
            <span class="me"> About Me</span>
