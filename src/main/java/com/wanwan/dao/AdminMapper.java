@@ -1,13 +1,15 @@
 package com.wanwan.dao;
 
+import com.wanwan.common.mybatis.MybatisMapper;
 import com.wanwan.domain.Admin;
 
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Map;
 
 @Component
-public interface AdminMapper {
+public interface AdminMapper  {
     int deleteByPrimaryKey(Integer id);
 
     int insert(Admin record);
@@ -27,4 +29,6 @@ public interface AdminMapper {
      * @return
      */
     Admin login(Map map);
+
+    List<Admin> listPageAdmins(Map<String,Object> map);
 }

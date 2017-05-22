@@ -48,6 +48,17 @@
 
         </property>
         <!--<property name="mapperLocations" value="classpath*:/com/wanwan/mapping/*.xml"/>-->
+        <property name="plugins">
+            <list>
+                <!-- 配置分页插件 -->
+                <bean class="com.wanwan.common.page.PageInterceptor">
+                    <!--数据库连接方式 -->
+                    <property name="dialect" value="mysql" />
+                    <!--用正则表达式来匹配需要拦截的ID，对应的也就是 mapper接口的方法名 -->
+                    <property name="pageSqlId" value=".*listPage.*" />
+                </bean>
+            </list>
+        </property>
     </bean>
     <!-- 配置扫描器 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
@@ -64,6 +75,10 @@
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
-
+    <!--&lt;!&ndash; DAO接口所在包名，Spring会自动查找其下的类 &ndash;&gt;-->
+    <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+        <!--<property name="basePackage" value="com.wanwan" />-->
+        <!--<property name="markerInterface" value="com.wanwan.common.mybatis.MybatisMapper"/>-->
+    <!--</bean>-->
 
 </beans>

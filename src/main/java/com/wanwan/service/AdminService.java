@@ -1,7 +1,9 @@
 package com.wanwan.service;
 
+import com.wanwan.common.page.Pagination;
 import com.wanwan.domain.Admin;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -28,4 +30,7 @@ public interface AdminService {
      * @return
      */
     Admin login(String username,String password) throws Exception ;
+
+
+    Map<String, Object> listPageAdmin(Map map);
 }

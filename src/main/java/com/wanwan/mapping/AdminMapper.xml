@@ -164,4 +164,7 @@
       select * from admin a where a.name =#{username,jdbcType=VARCHAR}
       and a.`password` = #{password,jdbcType=VARCHAR}
   </select>
+  <select id="listPageAdmins" parameterType="java.util.Map" resultMap="BaseResultMap">
+     select * from admin
+  </select>
 </mapper>

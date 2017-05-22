@@ -1,5 +1,6 @@
 package com.wanwan.serviceImpl;
 
+import com.wanwan.common.page.Pagination;
 import com.wanwan.dao.AdminMapper;
 import com.wanwan.domain.Admin;
 import com.wanwan.service.AdminService;
@@ -9,6 +10,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -54,6 +57,15 @@ public class AdminServiceImpl implements AdminService{
         map.put("password",password);
 
         return adminMapper.login(map);
+    }
+
+    public Map<String, Object> listPageAdmin(Map map) {
+
+
+        Map<String, Object> model = new HashMap<String, Object>();
+        model.put("rows", adminMapper.listPageAdmins(map));
+        model.put("total", ((Pagination) map.get("pagination")).getPageCount());
+        return model;
     }
 
 

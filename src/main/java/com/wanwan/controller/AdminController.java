@@ -1,6 +1,7 @@
 package com.wanwan.controller;
 
 import com.wanwan.common.jsonview.JsonView;
+import com.wanwan.common.page.Pagination;
 import com.wanwan.common.proxy.LogProxy;
 import com.wanwan.common.util.RedisCacheStorageImpl;
 import com.wanwan.domain.Admin;
@@ -106,7 +107,14 @@ public class AdminController {
 
 
     }
-
+  @RequestMapping("/list")
+  public JsonView list(int rows,int page){
+      Pagination pagination = new Pagination(rows, page);
+      Map map = new HashMap();
+      map.put("pagination", pagination);
+     Map model = adminService.listPageAdmin(map);
+      return new JsonView(200, "登录成功",model);
+  }
     @RequestMapping("/login")
     public ModelAndView login(){
         ModelAndView mv = new ModelAndView();
