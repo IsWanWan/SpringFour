@@ -106,11 +106,5 @@ public class AdminController {
         mv.setViewName("/login");
         return mv;
     }
-    @RequestMapping("/loginTest")
-    public ModelAndView loginTest(){
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("/loginTest");
-        return mv;
-    }
 
 }
