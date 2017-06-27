@@ -18,7 +18,7 @@ import java.util.Map;
  * @create 2016-11-18 上午11:30
  */
 @Component
-public class RedisCacheStorageImpl<V> implements RedisCacheStorage<String, V> {
+public class RedisCacheStorageImpl<V>{
     /**
      * 日志记录
      */
@@ -49,7 +49,7 @@ public class RedisCacheStorageImpl<V> implements RedisCacheStorage<String, V> {
      * @param value
      * @return
      */
-    @Override
+
     public boolean set(String key, V value) {
         // 先不做设置默认过时时间
         return set(key, value);
@@ -63,7 +63,7 @@ public class RedisCacheStorageImpl<V> implements RedisCacheStorage<String, V> {
      * @param exp   过期时间 s
      * @return
      */
-    @Override
+
     public boolean set(String key, V value, int exp) {
         Jedis jedis =null;
         //将key 和value  转换成 json 对象
@@ -103,7 +103,7 @@ public class RedisCacheStorageImpl<V> implements RedisCacheStorage<String, V> {
      * @param key
      * @return
      */
-    @Override
+
     public V get(String key) {
         Jedis jedis =null;
         //将key 和value  转换成 json 对象
@@ -143,7 +143,7 @@ public class RedisCacheStorageImpl<V> implements RedisCacheStorage<String, V> {
      * @param key
      * @return
      */
-    @Override
+
     public boolean remove(String key) {
         Jedis jedis =null;
         //将key 和value  转换成 json 对象
@@ -183,7 +183,7 @@ public class RedisCacheStorageImpl<V> implements RedisCacheStorage<String, V> {
      * @param value
      * @return
      */
-    @Override
+
     public boolean hset(String cacheKey, String key, V value) {
         Jedis jedis =null;
         //将key 和value  转换成 json 对象
@@ -224,7 +224,7 @@ public class RedisCacheStorageImpl<V> implements RedisCacheStorage<String, V> {
      * @param key
      * @return
      */
-    @Override
+
     public String hget(String cacheKey, String key) {
         Jedis jedis =null;
         //将key 和value  转换成 json 对象
@@ -265,7 +265,7 @@ public class RedisCacheStorageImpl<V> implements RedisCacheStorage<String, V> {
      * @param cacheKey
      * @return
      */
-    @Override
+
     public Map<String, V> hget(String cacheKey) {
         String jCacheKey =JSON.toJSONString(cacheKey);
         //非空校验

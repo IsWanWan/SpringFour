@@ -1,5 +1,6 @@
 package com.wanwan.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.wanwan.common.jsonview.JsonView;
 import com.wanwan.common.util.RedisCacheStorageImpl;
 import com.wanwan.domain.Admin;
@@ -31,7 +32,7 @@ public class AdminController {
     @Autowired
     private SysPriceService sysPriceService;
     /**
-     * 缓存存储
+     * 缓存存储 自动注入可用
      */
      @Autowired
     private RedisCacheStorageImpl<Admin> storageCache;
@@ -42,16 +43,19 @@ public class AdminController {
      */
 
     @RequestMapping("/index")
-    public ModelAndView index(){
+    public ModelAndView index(Integer id){
         ModelAndView mv = new ModelAndView();
-        Admin admin = adminService.selectByPrimaryKey(2);
-
-        if(admin ==null){
-            logger.info("admin 不能为空!!!!!!!!!!!!!!!");
-            logger.error(" admin 为空");
-
-        }
-        mv.addObject(admin);
+        /***
+         * 以下测试 redis 的代码 准确可用 ，这里先注释
+         */
+//        Admin admin = adminService.selectByPrimaryKey(id);
+////
+//        if(admin ==null){
+//            logger.info("admin 不能为空!!!!!!!!!!!!!!!");
+//            logger.error(" admin 为空");
+//
+//        }
+//        mv.addObject(admin);
 //        storageCache.hset(cacheKey,String.valueOf(admin.getId()),admin);
 //        Admin adminO = JSON.parseObject(storageCache.hget(cacheKey,String.valueOf(admin.getId())),Admin.class) ;
 //        System.out.println(" get from admin::::::"+adminO.getUsername());
