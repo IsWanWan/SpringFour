@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="42e2e8f2-71bc-4b97-8b81-9a3897b7b0e2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wanwan/controller/AdminController.java" afterPath="$PROJECT_DIR$/src/main/java/com/wanwan/controller/AdminController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wanwan/service/AdminService.java" afterPath="$PROJECT_DIR$/src/main/java/com/wanwan/service/AdminService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wanwan/serviceImpl/AdminServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wanwan/serviceImpl/AdminServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/applicationConfig-dao.xml" afterPath="$PROJECT_DIR$/src/main/resources/applicationConfig-dao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.vm" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,8 +80,8 @@
       <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wanwan/controller/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+            <state relative-caret-position="244">
+              <caret line="101" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -183,7 +176,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wanwan/serviceImpl/AdminServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wanwan/service/AdminService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wanwan/mapping/EmployeeMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wanwan/controller/AdminController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationConfig-dao.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -191,6 +183,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/target/springFour/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wanwan/controller/AdminController.java" />
       </list>
     </option>
   </component>
@@ -1152,12 +1145,12 @@
       <workItem from="1503920114658" duration="1223000" />
       <workItem from="1503970575612" duration="1223000" />
       <workItem from="1503990457785" duration="646000" />
-      <workItem from="1505298285956" duration="12000" />
+      <workItem from="1505298285956" duration="263000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60320000" />
+    <option name="totallyTimeSpent" value="60571000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1407,6 +1400,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18875">
           <caret line="755" column="6" lean-forward="false" selection-start-line="755" selection-start-column="6" selection-end-line="755" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1547,8 +1541,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wanwan/controller/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+        <state relative-caret-position="244">
+          <caret line="101" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
           <folding />
         </state>
       </provider>
