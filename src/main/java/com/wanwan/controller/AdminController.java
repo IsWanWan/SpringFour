@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.wanwan.common.jsonview.JsonView;
 import com.wanwan.common.util.RedisCacheStorageImpl;
 import com.wanwan.domain.Admin;
+import com.wanwan.domain.Employee;
 import com.wanwan.service.AdminService;
 import com.wanwan.service.LogLoginService;
 import com.wanwan.service.SysPriceService;
@@ -107,4 +108,19 @@ public class AdminController {
         return mv;
     }
 
+    @RequestMapping("/addEmployee")
+    public String addEmployee(){
+        Employee employee = new Employee();
+        employee.setName("zhaoxiuling");
+        employee.setDepartment("software");
+        employee.setPhone("15921961580");
+//        employee.setId(1014);
+       int id =   adminService.addEmployee(employee);
+       return "id :"+ id ;
+    }
+  @RequestMapping("/getEmployees")
+    public String getEmployee(){
+       Employee employee = adminService.getEmployee();
+       return employee.getName();
+  }
 }

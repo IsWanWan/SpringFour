@@ -1,7 +1,9 @@
 package com.wanwan.service;
 
 import com.wanwan.domain.Admin;
+import com.wanwan.domain.Employee;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -28,4 +30,9 @@ public interface AdminService {
      * @return
      */
     Admin login(String username,String password) throws Exception;
+
+
+    int addEmployee(Employee employee);
+
+    Employee getEmployee();
 }
