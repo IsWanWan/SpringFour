@@ -18,7 +18,7 @@
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://139.224.116.188:8066/TESTDB" />
+        <property name="url" value="jdbc:mysql://139.224.116.188:3306/test" />
         <property name="username" value="root" />
         <property name="password" value="123456" />
         <property name="maxActive" value="10" />
@@ -45,6 +45,7 @@
                 <value>classpath*:com/wanwan/mapping/AdminMapper.xml</value>
                 <value>classpath*:com/wanwan/mapping/SysPriceMapper.xml</value>
                 <value>classpath*:com/wanwan/mapping/EmployeeMapper.xml</value>
+                <value>classpath*:com/wanwan/mapping/LogMapper.xml</value>
             </list>
 
         </property>
@@ -65,6 +66,5 @@
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
-
 
 </beans>

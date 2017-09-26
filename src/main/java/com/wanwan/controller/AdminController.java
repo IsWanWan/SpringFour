@@ -8,6 +8,7 @@ import com.wanwan.domain.Employee;
 import com.wanwan.service.AdminService;
 import com.wanwan.service.LogLoginService;
 import com.wanwan.service.SysPriceService;
+import com.wanwan.util.SystemLog;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -70,6 +71,7 @@ public class AdminController {
      * @return
      */
     @RequestMapping("/detail")
+    @SystemLog(module = "首页",methods = "博客详情页")
     public ModelAndView detail(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("/detail");

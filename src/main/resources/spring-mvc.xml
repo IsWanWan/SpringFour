@@ -62,5 +62,12 @@
             <!--<bean class="com.wanwan.common.interceptor.CommonInterceptor"/>-->
         <!--</mvc:interceptor>-->
     <!--</mvc:interceptors>-->
+    <!-- 开启AOP拦截 -->
+    <aop:aspectj-autoproxy proxy-target-class="true" />
+    <mvc:annotation-driven />
+    <!-- 定义Spring描述Bean的范围  -->
+    <context:component-scan base-package="**.wanwan.util" >
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
     </beans>
 
