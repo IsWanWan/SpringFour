@@ -1,14 +1,13 @@
 package com.wanwan.serviceImpl;
 
-import com.wanwan.common.page.Pagination;
 import com.wanwan.dao.AdminMapper;
+import com.wanwan.dao.EmployeeMapper;
 import com.wanwan.domain.Admin;
+import com.wanwan.domain.Employee;
 import com.wanwan.service.AdminService;
-import org.apache.commons.collections.map.HashedMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 
 import java.util.HashMap;
 import java.util.List;
@@ -22,6 +21,8 @@ import java.util.Map;
 public class AdminServiceImpl implements AdminService{
     @Autowired
     private AdminMapper adminMapper;
+    @Autowired
+    private EmployeeMapper employeeMapper;
 
     public Admin selectByPrimaryKey(Integer id) {
 
@@ -47,25 +48,26 @@ public class AdminServiceImpl implements AdminService{
     /**
      * 登录
      *
-     * @param username
-     * @param password
+     * @param  username, password
      * @return
      */
-    public Admin login(String username, String password) throws Exception {
-       Map<String,Object> map = new HashedMap();
-       map.put("username",username);
+    @Override
+    public Admin login(String username,String password) throws Exception {
+        Map map = new HashMap();
+        map.put("username",username);
         map.put("password",password);
-
         return adminMapper.login(map);
     }
 
-    public Map<String, Object> listPageAdmin(Map map) {
+    @Override
+    public int addEmployee(Employee employee) {
+       int n = employeeMapper.insertSelective(employee);
+        return n;
+    }
 
-
-        Map<String, Object> model = new HashMap<String, Object>();
-        model.put("rows", adminMapper.listPageAdmins(map));
-        model.put("total", ((Pagination) map.get("pagination")).getPageCount());
-        return model;
+    @Override
+    public Employee getEmployee() {
+        return employeeMapper.selectByPrimaryKey(1003);
     }
 
 

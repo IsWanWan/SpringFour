@@ -12,17 +12,17 @@
         http://www.springframework.org/schema/tx
 		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
 
-    <!-- 加载外部文件配置文件 -->
-    <context:property-placeholder location="classpath:db/jdbc.properties" />
+    <!--&lt;!&ndash; 加载配置文件 &ndash;&gt;-->
+    <!--<context:property-placeholder location="classpath:db/jdbc.properties" />-->
     <!-- 数据库连接池 -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
-        <property name="driverClassName" value="${driver}" />
-        <property name="url" value="${url}" />
-        <property name="username" value="${username}" />
-        <property name="password" value="${password}" />
-        <property name="maxActive" value="${maxActive}" />
-        <property name="maxIdle" value="${maxIdle}" />
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://139.224.116.188:3306/test" />
+        <property name="username" value="root" />
+        <property name="password" value="123456" />
+        <property name="maxActive" value="10" />
+        <property name="maxIdle" value="5" />
     </bean>
 
       <!-- 这里不扫描controller  在springmvc中扫描controller-->
@@ -44,21 +44,12 @@
                 <value>classpath*:com/wanwan/mapping/LogLoginMapper.xml</value>
                 <value>classpath*:com/wanwan/mapping/AdminMapper.xml</value>
                 <value>classpath*:com/wanwan/mapping/SysPriceMapper.xml</value>
+                <value>classpath*:com/wanwan/mapping/EmployeeMapper.xml</value>
+                <value>classpath*:com/wanwan/mapping/LogMapper.xml</value>
             </list>
 
         </property>
         <!--<property name="mapperLocations" value="classpath*:/com/wanwan/mapping/*.xml"/>-->
-        <property name="plugins">
-            <list>
-                <!-- 配置分页插件 -->
-                <bean class="com.wanwan.common.page.PageInterceptor">
-                    <!--数据库连接方式 -->
-                    <property name="dialect" value="mysql" />
-                    <!--用正则表达式来匹配需要拦截的ID，对应的也就是 mapper接口的方法名 -->
-                    <property name="pageSqlId" value=".*listPage.*" />
-                </bean>
-            </list>
-        </property>
     </bean>
     <!-- 配置扫描器 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
@@ -75,10 +66,5 @@
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
-    <!--&lt;!&ndash; DAO接口所在包名，Spring会自动查找其下的类 &ndash;&gt;-->
-    <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
-        <!--<property name="basePackage" value="com.wanwan" />-->
-        <!--<property name="markerInterface" value="com.wanwan.common.mybatis.MybatisMapper"/>-->
-    <!--</bean>-->
 
 </beans>

@@ -1,4 +1,4 @@
-package com.wanwan.common.util;
+package com.wanwan.common.util.redis;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,10 +39,10 @@ public class RedisClient {
         config.setTestOnBorrow(true);
 
         //redis如果设置了密码：
-            pool = new JedisPool(config, "127.0.0.1", 6379, 10000,"123456");
+//            pool = new JedisPool(config, "127.0.0.1", 6379, 10000,"123456");
 
         //redis未设置了密码：
-      //  pool = new JedisPool(config, "127.0.0.1",6379);
+        pool = new JedisPool(config, "127.0.0.1",6379);
     }
 
      public RedisClient(){

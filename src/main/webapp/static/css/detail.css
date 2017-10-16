@@ -181,38 +181,6 @@ a{
     font-size: 45px;
     font-weight: bold;
 }
-/*.contentFoot{*/
-    /*margin: 10px auto;*/
-    /*height: 50px;*/
-
-/*}*/
-/*.author{*/
-    /*float: left;*/
-    /*line-height: 50px;*/
-    /*text-align: center;*/
-    /*width: 235px;*/
-    /*border: 1px solid #cccccc;*/
-    /*border-left:none;*/
-/*}*/
-/*.continue{*/
-    /*float: left;*/
-    /*line-height: 50px;*/
-    /*text-align: center;*/
-    /*width: 235px;*/
-    /*border: 1px solid #cccccc;*/
-    /*border-left:none;*/
-
-/*}*/
-/*.share{*/
-    /*float: left;*/
-    /*line-height: 50px;*/
-    /*text-align: center;*/
-    /*width: 235px;*/
-    /*border: 1px solid #cccccc;*/
-    /*border-right:none;*/
-    /*border-left:none;*/
-
-/*}*/
 .aboutMe{
     margin: 40px auto;
     width: 270px;

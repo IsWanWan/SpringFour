@@ -1,7 +1,7 @@
 package com.wanwan.service;
 
-import com.wanwan.common.page.Pagination;
 import com.wanwan.domain.Admin;
+import com.wanwan.domain.Employee;
 
 import java.util.List;
 import java.util.Map;
@@ -29,8 +29,10 @@ public interface AdminService {
      * @param username,password
      * @return
      */
-    Admin login(String username,String password) throws Exception ;
+    Admin login(String username,String password) throws Exception;
 
 
-    Map<String, Object> listPageAdmin(Map map);
+    int addEmployee(Employee employee);
+
+    Employee getEmployee();
 }

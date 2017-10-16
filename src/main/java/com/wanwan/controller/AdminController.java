@@ -1,14 +1,13 @@
 package com.wanwan.controller;
 
 import com.wanwan.common.jsonview.JsonView;
-import com.wanwan.common.page.Pagination;
-import com.wanwan.common.proxy.LogProxy;
-import com.wanwan.common.util.RedisCacheStorageImpl;
+import com.wanwan.common.util.redis.RedisCacheStorageImpl;
 import com.wanwan.domain.Admin;
+import com.wanwan.domain.Employee;
 import com.wanwan.service.AdminService;
 import com.wanwan.service.LogLoginService;
 import com.wanwan.service.SysPriceService;
-import com.wanwan.serviceImpl.AdminServiceImpl;
+import com.wanwan.common.util.aoplog.SystemLog;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-
 import javax.servlet.http.HttpSession;
-import java.lang.reflect.Proxy;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,7 +33,7 @@ public class AdminController {
     @Autowired
     private SysPriceService sysPriceService;
     /**
-     * 缓存存储
+     * 缓存存储 自动注入可用
      */
      @Autowired
     private RedisCacheStorageImpl<Admin> storageCache;
@@ -47,10 +44,13 @@ public class AdminController {
      */
 
     @RequestMapping("/index")
-    public ModelAndView index(){
+    public ModelAndView index(Integer id){
         ModelAndView mv = new ModelAndView();
-//        Admin admin = adminService.selectByPrimaryKey(2);
-
+        /***
+         * 以下测试 redis 的代码 准确可用 ，这里先注释
+         */
+//        Admin admin = adminService.selectByPrimaryKey(id);
+////
 //        if(admin ==null){
 //            logger.info("admin 不能为空!!!!!!!!!!!!!!!");
 //            logger.error(" admin 为空");
@@ -70,12 +70,12 @@ public class AdminController {
      * @return
      */
     @RequestMapping("/detail")
+    @SystemLog(module = "首页",methods = "博客详情页")
     public ModelAndView detail(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("/detail");
         return mv;
     }
-
 
     /***
      * 登录接口
@@ -83,12 +83,6 @@ public class AdminController {
      */
     @RequestMapping("/doLogin")
     public JsonView Login(HttpSession session,String username,String password) {
-
-//        //动态代理做日志
-//        LogProxy logHandler = new LogProxy();
-//
-//        AdminServiceImpl adminService = (AdminServiceImpl) logHandler.newProxyInstance(new AdminServiceImpl());
-
         Map map = new HashMap();
         try {
             Admin admin = adminService.login(username, password);
@@ -102,19 +96,13 @@ public class AdminController {
         } catch (Exception e) {
             e.printStackTrace();
             logger.error("登录错误");
+            //ssss
             return new JsonView(500, "系统错误");
         }
 
 
     }
-  @RequestMapping("/list")
-  public JsonView list(int rows,int page){
-      Pagination pagination = new Pagination(rows, page);
-      Map map = new HashMap();
-      map.put("pagination", pagination);
-     Map model = adminService.listPageAdmin(map);
-      return new JsonView(200, "登录成功",model);
-  }
+
     @RequestMapping("/login")
     public ModelAndView login(){
         ModelAndView mv = new ModelAndView();
@@ -122,5 +110,19 @@ public class AdminController {
         return mv;
     }
 
-
+    @RequestMapping("/addEmployee")
+    public String addEmployee(){
+        Employee employee = new Employee();
+        employee.setName("zhaoxiuling");
+        employee.setDepartment("software");
+        employee.setPhone("15921961580");
+//        employee.setId(1014);
+       int id =   adminService.addEmployee(employee);
+       return "id :"+ id ;
+    }
+  @RequestMapping("/getEmployees")
+    public String getEmployee(){
+       Employee employee = adminService.getEmployee();
+       return employee.getName();
+  }
 }
