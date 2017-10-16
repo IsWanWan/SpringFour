@@ -1,4 +1,4 @@
-package com.wanwan.common.util;
+package com.wanwan.common.util.redis;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

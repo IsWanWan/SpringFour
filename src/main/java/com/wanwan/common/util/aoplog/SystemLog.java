@@ -1,4 +1,4 @@
-package com.wanwan.util;
+package com.wanwan.common.util.aoplog;
 
 import java.lang.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.wanwan.common.util;
+package com.wanwan.common.util.redis;
 
 import com.alibaba.fastjson.JSON;
 import org.apache.commons.lang3.StringUtils;

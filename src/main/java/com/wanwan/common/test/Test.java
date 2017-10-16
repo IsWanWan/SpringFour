@@ -1,9 +1,6 @@
 package com.wanwan.common.test;
 
-import com.wanwan.common.util.RedisClient;
-import com.wanwan.common.util.SerializeUtil;
-import com.wanwan.domain.Admin;
-import redis.clients.jedis.Jedis;
+import com.wanwan.common.util.redis.RedisClient;
 
 /**
  * 测试

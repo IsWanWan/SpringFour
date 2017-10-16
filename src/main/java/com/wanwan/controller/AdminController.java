@@ -1,14 +1,13 @@
 package com.wanwan.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.wanwan.common.jsonview.JsonView;
-import com.wanwan.common.util.RedisCacheStorageImpl;
+import com.wanwan.common.util.redis.RedisCacheStorageImpl;
 import com.wanwan.domain.Admin;
 import com.wanwan.domain.Employee;
 import com.wanwan.service.AdminService;
 import com.wanwan.service.LogLoginService;
 import com.wanwan.service.SysPriceService;
-import com.wanwan.util.SystemLog;
+import com.wanwan.common.util.aoplog.SystemLog;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
