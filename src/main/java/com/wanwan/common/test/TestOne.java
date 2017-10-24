@@ -1,6 +1,5 @@
 package com.wanwan.common.test;
 
-import org.junit.Test;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -40,7 +39,7 @@ public class TestOne {
 //
 //
 //    }
-    @Test
+
     public void hello(){
         System.out.println("hello word");
         FileInputStream inputStream= null;

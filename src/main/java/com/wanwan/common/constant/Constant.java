@@ -22,6 +22,6 @@ public class Constant {
     // 上课 授权老师如果是平台 获取比例
     public static  BigDecimal MU_YAN_AUTH_COURSE_PERCENT =  new BigDecimal(0.0);
 
-
+    public static String SALT = "wanwan";
 
 }

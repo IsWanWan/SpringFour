@@ -12,15 +12,18 @@
         http://www.springframework.org/schema/tx
 		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
 
-    <!--&lt;!&ndash; 加载配置文件 &ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash; 加载配置文件 &ndash;&gt;&ndash;&gt;-->
     <!--<context:property-placeholder location="classpath:db/jdbc.properties" />-->
+    <bean id="placeHolderConfigurer" class="com.wanwan.common.util.encrypt.EncryptPropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:db/jdbc.properties"></property>
+    </bean>
     <!-- 数据库连接池 -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://139.224.116.188:3306/test" />
-        <property name="username" value="root" />
-        <property name="password" value="123456" />
+        <property name="driverClassName" value="${mysql.driver}" />
+        <property name="url" value="${mysql.url}" />
+        <property name="username" value="${mysql.username}" />
+        <property name="password" value="${mysql.password}" />
         <property name="maxActive" value="10" />
         <property name="maxIdle" value="5" />
     </bean>
