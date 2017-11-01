@@ -125,4 +125,9 @@ public class AdminController {
        Employee employee = adminService.getEmployee();
        return employee.getName();
   }
+
+  @RequestMapping("/newBranch")
+    public JsonView newBrance(){
+        return  new JsonView(200,"success");
+  }
 }
