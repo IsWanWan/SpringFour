@@ -126,23 +126,4 @@ public class AdminController {
        return employee.getName();
   }
 
-    /**
-     * 测试回滚 第一次提交
-     * @return
-     */
-  @RequestMapping("/newBranch")
-    public JsonView newBranceO(){
-        return  new JsonView(200,"success");
-  }
-
-    /**
-     * 测试回滚第二次提交
-     * @return
-     */
-    @RequestMapping("/newBranch2")
-    public JsonView newBrance(){
-        return  new JsonView(200,"success");
-    }
-
-
 }
